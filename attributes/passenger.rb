@@ -44,3 +44,6 @@ node.default['nginx']['passenger']['max_instances_per_app'] = 0
 node.default['nginx']['passenger']['pool_idle_time'] = 300
 node.default['nginx']['passenger']['max_requests'] = 0
 node.default['nginx']['passenger']['gem_binary'] = nil
+
+### ADNL GEMS RELEVANT TO PASSENGER (ex: rake)
+node.default['nginx']['passenger']['gems']=%w(rake)

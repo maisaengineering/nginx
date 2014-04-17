@@ -28,7 +28,9 @@ unless packages.empty?
   end
 end
 
-gem_package 'rake'
+node['nginx']['passenger']['gems'].each do |adnl_gem|
+  gem_package adnl_gem
+end unless node['nginx']['passenger']['gems'].empty?
 
 gem_package 'passenger' do
   action     :install
